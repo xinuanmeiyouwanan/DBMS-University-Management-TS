@@ -1,0 +1,15 @@
+# Java
+target/
+out/
+*.class
+*.jar
+# IDE
+.idea/
+*.iml
+.vscode/
+# 数据库连接（含密码，绝对不能提交）
+db.properties
+# 系统
+Thumbs.db
+.DS_Store
+*.log
