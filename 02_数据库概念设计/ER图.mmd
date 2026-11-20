@@ -1,0 +1,68 @@
+erDiagram
+    DEPARTMENT ||--o{ MAJOR : "设置"
+    DEPARTMENT ||--o{ TEACHER : "聘用"
+    DEPARTMENT ||--o{ COURSE : "开设"
+    MAJOR ||--o{ STUDENT : "培养"
+    COURSE ||--o{ TEACHING_CLASS : "开班"
+    TEACHER ||--o{ TEACHING_CLASS : "授课"
+    STUDENT ||--o{ ENROLLMENT : "选修"
+    TEACHING_CLASS ||--o{ ENROLLMENT : "被选"
+
+    DEPARTMENT {
+        char dept_no PK "院系号"
+        varchar dept_name "院系名称"
+        varchar phone "办公电话"
+    }
+
+    MAJOR {
+        char major_no PK "专业号"
+        varchar major_name "专业名称"
+        tinyint years "学制"
+        char dept_no FK "所属院系"
+    }
+
+    STUDENT {
+        char student_no PK "学号"
+        varchar name "姓名"
+        char gender "性别"
+        date birth_date "出生日期"
+        smallint enroll_year "入学年份"
+        varchar class_name "行政班级"
+        char major_no FK "所属专业"
+    }
+
+    TEACHER {
+        char teacher_no PK "工号"
+        varchar name "姓名"
+        char gender "性别"
+        varchar title "职称"
+        char dept_no FK "所属院系"
+    }
+
+    COURSE {
+        char course_no PK "课程号"
+        varchar course_name "课程名称"
+        decimal credit "学分"
+        smallint hours "学时"
+        varchar course_type "课程性质"
+        char dept_no FK "开课院系"
+    }
+
+    TEACHING_CLASS {
+        varchar class_no PK "教学班号"
+        char semester "开课学期"
+        varchar time_slot "上课时间"
+        varchar classroom "教室"
+        smallint capacity "容量"
+        smallint enrolled_count "已选人数"
+        char course_no FK "所开课程"
+        char teacher_no FK "任课教师"
+    }
+
+    ENROLLMENT {
+        char student_no PK "学号"
+        varchar class_no PK "教学班号"
+        datetime select_time "选课时间"
+        decimal score "成绩(0-100)"
+        tinyint attempt "修读次数"
+    }
