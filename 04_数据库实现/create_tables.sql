@@ -1,4 +1,4 @@
-﻿-- 高校教学管理系统：MySQL 8.4 LTS
+-- 高校教学管理系统：MySQL 8.4 LTS
 -- 执行方式：mysql -u <user> -p < create_tables.sql
 CREATE DATABASE IF NOT EXISTS edu_ms
   CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
