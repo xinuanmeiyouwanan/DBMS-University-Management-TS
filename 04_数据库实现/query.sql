@@ -32,7 +32,7 @@ ORDER BY tc.class_no;
 
 -- Q5 GROUP BY + HAVING：统计至少两名学生选修的课程
 SELECT c.course_no, c.course_name, COUNT(e.student_no) AS enrollment_total,
-       AVG(e.score) AS average_score
+       AVG(e.score) AS avg_of_graded  -- 仅统计已录成绩；enrollment_total 计全部选课
 FROM course c
 JOIN teaching_class tc ON tc.course_no = c.course_no
 JOIN enrollment e ON e.class_no = tc.class_no
@@ -40,7 +40,7 @@ GROUP BY c.course_no, c.course_name
 HAVING COUNT(e.student_no) >= 2
 ORDER BY enrollment_total DESC;
 
--- Q6 IN 子查询：选修数据库系统课程的学生
+-- Q6 IN 子查询：选修数据库系统课程的学生（演示示例：以 CS000001 数据库系统为例）
 SELECT student_no, name
 FROM student
 WHERE student_no IN (
