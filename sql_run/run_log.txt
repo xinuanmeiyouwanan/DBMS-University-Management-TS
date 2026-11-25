@@ -1,0 +1,218 @@
+mysql> source E:/SJK/DZY/sql_run/create_tables.sql
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 1 row affected (0.02 sec)
+
+Database changed
+Query OK, 0 rows affected (0.04 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> USE edu_ms;
+Database changed
+mysql> SHOW TABLES;
++------------------+
+| Tables_in_edu_ms |
++------------------+
+| course           |
+| department       |
+| enrollment       |
+| major            |
+| student          |
+| teacher          |
+| teaching_class   |
++------------------+
+7 rows in set (0.00 sec)
+
+mysql> source E:/SJK/DZY/sql_run/insert_data.sql
+Query OK, 0 rows affected (0.00 sec)
+
+Database changed
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 10 rows affected (0.00 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+Query OK, 10 rows affected (0.00 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+Query OK, 10 rows affected (0.00 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+Query OK, 10 rows affected (0.00 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+Query OK, 10 rows affected (0.00 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+Query OK, 10 rows affected (0.00 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 13 rows affected (0.00 sec)
+Records: 13  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 10 rows affected (0.00 sec)
+Rows matched: 10  Changed: 10  Warnings: 0
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> source E:/SJK/DZY/sql_run/query.sql
+Query OK, 0 rows affected (0.00 sec)
+
+Database changed
+Query OK, 0 rows affected (0.00 sec)
+
++---------------+--------+-------------+------------+
+| student_no    | name   | enroll_year | class_name |
++---------------+--------+-------------+------------+
+| 2024000000001 | 张晨   |        2024 | 计科2401   |
+| 2024000000002 | 李悦   |        2024 | 计科2401   |
+| 2024000000003 | 王浩   |        2024 | 软件2401   |
+| 2024000000004 | 陈琳   |        2024 | 软件2401   |
++---------------+--------+-------------+------------+
+4 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++--------------------+----------+----------+----------------+
+| class_no           | semester | capacity | enrolled_count |
++--------------------+----------+----------+----------------+
+| 2026-1-EN000001-01 | 2026-1   |       60 |              1 |
+| 2026-1-MA000001-01 | 2026-1   |       60 |              1 |
+| 2026-1-CH000001-01 | 2026-1   |       45 |              1 |
+| 2026-1-EC000001-01 | 2026-1   |       45 |              1 |
+| 2026-1-ME000001-01 | 2026-1   |       45 |              1 |
+| 2026-1-PH000001-01 | 2026-1   |       45 |              1 |
+| 2026-1-CS000002-01 | 2026-1   |       40 |              2 |
+| 2026-1-CS000003-01 | 2026-1   |       40 |              1 |
+| 2026-1-CS000004-01 | 2026-1   |       40 |              1 |
++--------------------+----------+----------+----------------+
+9 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++---------------+--------+--------------------+--------------------+-------+
+| student_no    | name   | course_name        | class_no           | score |
++---------------+--------+--------------------+--------------------+-------+
+| 2024000000001 | 张晨   | 数据库系统         | 2026-1-CS000001-01 | 92.50 |
+| 2024000000001 | 张晨   | 程序设计基础       | 2026-1-CS000002-01 | 88.00 |
+| 2024000000002 | 李悦   | 数据库系统         | 2026-1-CS000001-01 | 85.00 |
+| 2024000000002 | 李悦   | 数据结构           | 2026-1-CS000003-01 | 91.00 |
+| 2024000000003 | 王浩   | 数据库系统         | 2026-1-CS000001-01 |  NULL |
+| 2024000000003 | 王浩   | 软件工程导论       | 2026-1-CS000004-01 | 76.50 |
+| 2024000000004 | 陈琳   | 高等数学           | 2026-1-MA000001-01 | 80.00 |
+| 2024000000005 | 赵敏   | 大学英语           | 2026-1-EN000001-01 | 95.00 |
+| 2024000000006 | 刘洋   | 管理学原理         | 2026-1-EC000001-01 | 73.00 |
+| 2024000000007 | 周宁   | 大学物理           | 2026-1-PH000001-01 |  NULL |
+| 2024000000008 | 吴迪   | 普通化学           | 2026-1-CH000001-01 | 84.00 |
+| 2024000000009 | 郑欣   | 工程制图           | 2026-1-ME000001-01 | 89.00 |
+| 2024000000010 | 孙博   | 程序设计基础       | 2026-1-CS000002-01 | 78.00 |
++---------------+--------+--------------------+--------------------+-------+
+13 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++--------------------+--------------------+--------------+------------------+
+| class_no           | course_name        | actual_count | maintained_count |
++--------------------+--------------------+--------------+------------------+
+| 2026-1-CH000001-01 | 普通化学           |            1 |                1 |
+| 2026-1-CS000001-01 | 数据库系统         |            3 |                3 |
+| 2026-1-CS000002-01 | 程序设计基础       |            2 |                2 |
+| 2026-1-CS000003-01 | 数据结构           |            1 |                1 |
+| 2026-1-CS000004-01 | 软件工程导论       |            1 |                1 |
+| 2026-1-EC000001-01 | 管理学原理         |            1 |                1 |
+| 2026-1-EN000001-01 | 大学英语           |            1 |                1 |
+| 2026-1-MA000001-01 | 高等数学           |            1 |                1 |
+| 2026-1-ME000001-01 | 工程制图           |            1 |                1 |
+| 2026-1-PH000001-01 | 大学物理           |            1 |                1 |
++--------------------+--------------------+--------------+------------------+
+10 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++-----------+--------------------+------------------+---------------+
+| course_no | course_name        | enrollment_total | average_score |
++-----------+--------------------+------------------+---------------+
+| CS000001  | 数据库系统         |                3 |     88.750000 |
+| CS000002  | 程序设计基础       |                2 |     83.000000 |
++-----------+--------------------+------------------+---------------+
+2 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++---------------+--------+
+| student_no    | name   |
++---------------+--------+
+| 2024000000001 | 张晨   |
+| 2024000000002 | 李悦   |
+| 2024000000003 | 王浩   |
++---------------+--------+
+3 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++---------------+--------+
+| student_no    | name   |
++---------------+--------+
+| 2024000000001 | 张晨   |
+| 2024000000002 | 李悦   |
+| 2024000000003 | 王浩   |
+| 2024000000004 | 陈琳   |
+| 2024000000005 | 赵敏   |
+| 2024000000006 | 刘洋   |
+| 2024000000007 | 周宁   |
+| 2024000000008 | 吴迪   |
+| 2024000000009 | 郑欣   |
+| 2024000000010 | 孙博   |
++---------------+--------+
+10 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++----------+-----------+--------------------+-------------+---------------+---------------+-------------------+
+| semester | course_no | course_name        | class_total | student_total | average_score | pass_rate_percent |
++----------+-----------+--------------------+-------------+---------------+---------------+-------------------+
+| 2026-1   | CS000001  | 数据库系统         |           1 |             3 |         88.75 |            100.00 |
+| 2026-1   | CS000002  | 程序设计基础       |           1 |             2 |         83.00 |            100.00 |
+| 2026-1   | CH000001  | 普通化学           |           1 |             1 |         84.00 |            100.00 |
+| 2026-1   | CS000003  | 数据结构           |           1 |             1 |         91.00 |            100.00 |
+| 2026-1   | CS000004  | 软件工程导论       |           1 |             1 |         76.50 |            100.00 |
+| 2026-1   | EC000001  | 管理学原理         |           1 |             1 |         73.00 |            100.00 |
+| 2026-1   | EN000001  | 大学英语           |           1 |             1 |         95.00 |            100.00 |
+| 2026-1   | MA000001  | 高等数学           |           1 |             1 |         80.00 |            100.00 |
+| 2026-1   | ME000001  | 工程制图           |           1 |             1 |         89.00 |            100.00 |
+| 2026-1   | PH000001  | 大学物理           |           1 |             1 |          NULL |              NULL |
++----------+-----------+--------------------+-------------+---------------+---------------+-------------------+
+10 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Empty set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> notee
