@@ -1,0 +1,9 @@
+url=jdbc:mysql://127.0.0.1:3306/edu_ms?sslMode=REQUIRED&serverTimezone=Asia/Shanghai&characterEncoding=utf8
+user=
+password=
+
+# 选退课起止时间，使用北京时间。两项均留空时关闭选退课。
+selection.start=
+selection.end=
+# 已归档教学班号，用英文逗号分隔。
+grade.archived.classes=
